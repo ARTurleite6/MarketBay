@@ -19,6 +19,9 @@ namespace MarketBay.Models
         public string Password { get; set; }
         [MaxLength(9)]
         public string NumeroTelemovel { get; set; }
+        
+        [ForeignKey("Morada")]
+        public int? MoradaID { get; set; }
         public Morada? Morada { get; set; }
     }
 }

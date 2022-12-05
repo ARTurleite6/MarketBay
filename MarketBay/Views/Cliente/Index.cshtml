@@ -1,0 +1,27 @@
+@model List<MarketBay.Models.Cliente>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>title</title>
+</head>
+<body>
+<div>
+    
+    <ul>
+    @foreach(var cliente in Model)
+    {
+        <li>
+            @cliente.ID
+        </li>     
+    }
+    </ul>
+
+</div>
+</body>
+</html>

@@ -4,13 +4,12 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MarketBay.Models
 {
+    [Table("Morada")]
     public class Morada
     {
 
         [Key]
         public int ID { get;set; }
-        [ForeignKey("Conta")]
-        public int ContaID { get; set; }
         [MaxLength(200)]
         public string Rua { get; set; }
         [MaxLength(8)]

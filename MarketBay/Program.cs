@@ -1,17 +1,18 @@
 ﻿using MarketBay.Data;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+builder.Services.AddControllers();
 builder.Services.AddDbContext<DatabaseContext>(options =>
         options.UseSqlServer(@"Server=localhost;Database=MarketBayDB;User=sa;Password=reallyStrongPwd123;TrustServerCertificate=True;")
     );
 
 var app = builder.Build();
-
 
 using (var scope = app.Services.CreateScope())
 {

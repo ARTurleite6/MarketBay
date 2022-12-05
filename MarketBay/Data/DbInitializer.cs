@@ -8,7 +8,8 @@ public static class DbInitializer
     {
         context.Database.EnsureCreated();
 
-        if (!context.Contas.Any()) return;
+        if (context.Contas.Any()) return;
+        
         var conta = new Conta()
         {
             Email = "teste1@gmai.com",
@@ -17,6 +18,15 @@ public static class DbInitializer
             NumeroTelemovel = "912313456",
         };
         context.Contas.Add(conta);
+
+        var cliente = new Cliente()
+        {
+            ContaID = conta.ID, 
+            Conta = conta, 
+        };
+        
+        context.Clientes.Add(cliente);
+        
         context.SaveChanges();
     }
 }
