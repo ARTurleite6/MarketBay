@@ -1,4 +1,4 @@
-@model List<MarketBay.Models.Cliente>
+@model MarketBay.Models.Cliente
 
 @{
     Layout = "_Layout";
@@ -13,14 +13,8 @@
 <body>
 <div>
     
-    <ul>
-    @foreach(var cliente in Model)
-    {
-        <li>
-            @cliente.ID
-        </li>     
-    }
-    </ul>
+    <h1>Email</h1>
+    <h2>@Model.Conta.Email</h2>
 
 </div>
 </body>

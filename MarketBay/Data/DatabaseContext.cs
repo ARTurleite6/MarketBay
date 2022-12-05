@@ -52,6 +52,14 @@ namespace MarketBay.Data
                 .WithOne()
                 .OnDelete(DeleteBehavior.SetNull);
 
+            modelBuilder.Entity<Conta>()
+                .HasIndex(c => c.Email)
+                .IsUnique();
+
+            modelBuilder.Entity<Feirante>()
+                .HasIndex(f => f.NIFempresarial)
+                .IsUnique();
+                
             modelBuilder.Entity<ProdutoStand>()
                 .HasOne<StandFeirante>()
                 .WithMany(stand => stand.ProdutosStands)

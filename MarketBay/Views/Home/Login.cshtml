@@ -1,0 +1,24 @@
+@{
+    Layout = "_Layout";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>title</title>
+</head>
+<body>
+<div>
+
+    <form method="post" asp-controller="Home" asp-action="Login">
+        <div>Email</div>
+        <input type="text" name="email"/>
+        <div>Password</div>
+        <input type="password" name="password"/>
+        <input type="submit" value="Login"/>
+    </form>
+      
+</div>
+</body>
+</html>
