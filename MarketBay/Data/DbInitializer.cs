@@ -8,6 +8,7 @@ public static class DbInitializer
     {
         context.Database.EnsureCreated();
 
+        /*
         if (context.Contas.Any()) return;
         
         var conta = new Conta()
@@ -28,5 +29,6 @@ public static class DbInitializer
         context.Clientes.Add(cliente);
         
         context.SaveChanges();
+        */
     }
 }

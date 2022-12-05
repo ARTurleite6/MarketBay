@@ -1,0 +1,30 @@
+@model MarketBay.Models.Cliente
+
+@{
+    Layout = "_Layout";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+</head>
+<body>
+<div>
+
+    <form method="post" asp-controller="Cliente" asp-action="Register">
+        <div>Nome Completo</div>
+        <input type="text" placeholder="Nome Completo" asp-for="Conta.Nome"/>
+        <div>Email</div>
+        <input type="text" placeholder="hello@reallygreatsite.com" asp-for="Conta.Email"/>
+        <div>Palavra-Passe</div>
+        <input type="text" asp-for="Conta.Password"/>
+        <div>Numero de Telemovel</div>
+        <input type="text" placeholder="Numero de Telemovel" asp-for="Conta.NumeroTelemovel"/>
+        <input type="submit" value="Sign Up"/>
+    </form>
+    
+    
+</div>
+</body>
+</html>
